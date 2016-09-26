@@ -21,7 +21,8 @@
 
 	&__wrap{
 		@include clearfix;
-		max-width: 1000px;
+		min-width: 1000px;
+		max-width: 1240px;
 		padding: 0 10px;
 		margin: auto;
 	}
@@ -29,9 +30,9 @@
 	&__title{
 		text-align: center;
 		margin: 0 0 40px;
-		font-weight: 700;
+		font-weight: 400;
 		font-size: 36px;
-		line-height: (50/36);
+		line-height: 1.2;
 	}
 
 	&__text{
@@ -39,4 +40,343 @@
 	}
 }
 
+/* ==========================================================================
+ * logo
+ * ========================================================================== */
+
+.logo{
+	text-indent: -9999px;
+	display: inline-block;
+
+	&--dnevnik{
+		@include sprite($logotype);
+	}
+
+	&--ms{
+		@include sprite($mx);
+	}
+}
  
+/* ==========================================================================
+ * home
+ * ========================================================================== */
+
+.home{
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	color: #fff;
+
+	padding: 18px 0 18px;
+
+	min-height: 715px;
+
+	&--onedrive{
+		background-color: #5f3428;
+		background-image: url(../images/bg/onedrive.jpg);
+	}
+
+	&--office365{
+		background-color: #8d7c6b;
+		background-image: url(../images/bg/office365.jpg);
+	}
+
+	&--onenote{
+		background-color: #a49c94;
+		background-image: url(../images/bg/onenote.jpg);
+	}
+
+	&__logos{
+		margin: 0 0 140px;
+	}
+
+	&__logo-placeholder{
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0 20px 0 0;
+	}
+
+	&__title{
+		text-align: center;
+		font-size: 86px;
+		margin: 0 0 50px;
+	}
+
+	&__button-placeholder{
+		text-align: center;
+	}
+
+	&__button{
+		font-family: $sans;
+		padding: 20px 80px;
+	}
+}
+
+
+/* ==========================================================================
+ * nav
+ * ========================================================================== */
+
+.nav{
+	padding: 0;
+	box-shadow: 0 5px 15px rgba(0,0,0,.2);
+	position: relative;
+	z-index: 5;
+
+	&__list{
+		text-align: left;	
+
+		display: flex;
+		flex-direction: row;	
+	}
+
+	&__item{
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	&__href{
+		display: block;
+		padding: 88px 20px 14px;
+		color: #c4c4c4;
+		font-family: $sans;
+		font-size: 16px;
+		position: relative;
+
+		&:before{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 20px;
+		}
+
+		&--1{
+
+			width: 224px;
+			
+			&:hover,
+			&.nav__href--active{
+				color: #fff;
+				background: $blue;
+
+				&:before{
+					@include sprite($nav-1-hover);
+				}
+			}
+
+			&:before{
+				margin: 40px 0 0 0px;
+				@include sprite($nav-1);
+			}
+		}
+
+		&--2{
+
+			width: 228px;
+			
+			&:hover,
+			&.nav__href--active{
+				color: #fff;
+				background: $orange;
+
+				&:before{
+					@include sprite($nav-2-hover);
+				}
+			}
+
+			&:before{
+				margin: 36px 0 0 0px;
+				@include sprite($nav-2);
+			}
+		}
+
+		&--3{
+
+			width: 200px;
+			
+			&:hover,
+			&.nav__href--active{
+				//color: #fff;
+				//background: $orange;
+
+				&:before{
+					//@include sprite($nav-3-hover);
+				}
+			}
+
+			&:before{
+				margin: 46px 0 0 0px;
+				@include sprite($nav-3);
+			}
+		}
+
+		&--4{
+
+			width: 226px;
+			
+			&:hover,
+			&.nav__href--active{
+				color: #fff;
+				background: $purple;
+
+				&:before{
+					@include sprite($nav-4-hover);
+				}
+			}
+
+			&:before{
+				margin: 30px 0 0 0px;
+				@include sprite($nav-4);
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+ * o-list
+ * ========================================================================== */
+
+.o-list{
+	counter-reset: list;
+
+	&__item{
+		padding: 0 0 0 45px;
+		margin: 0 0 40px;
+		position: relative;
+		font-size: 22px;
+		&:before{
+			counter-increment: list;
+			content: counter(list);
+			position: absolute;
+			top: 50%;
+			left: 0;
+			margin-top: -30px;
+			font-size: 48px;
+			font-weight: 700;
+			font-style: italic;
+			color: $blue;
+		}
+	}
+}
+/* ==========================================================================
+ * u-list
+ * ========================================================================== */
+
+.u-list{
+
+	&__item{
+		padding: 0 0 0 45px;
+		margin: 0 0 40px;
+		position: relative;
+		font-size: 22px;
+		&:before{
+			content: '–';
+			position: absolute;
+			top: 0;
+			left: 0;
+			//margin-top: -2px;
+			font-size: 48px;
+			line-height: 22px;
+			font-weight: 700;
+			color: $orange;
+		}
+	}
+}
+
+/* ==========================================================================
+ * about
+ * ========================================================================== */
+
+.about{
+	padding: 0;
+	position: relative;
+
+	&:before{
+		content: '';
+		position: absolute;
+		top: 20px;
+		bottom: 20px;
+		right: 62%;
+		width: 536px;
+		background-repeat: no-repeat;
+		background-position: 100% 50%;
+		background-size: contain;
+	}
+
+	&--onedrive{
+		background-color: $blue;
+		//min-height: 800px;
+
+		&:before{
+			background-image: url(../images/onedrive.png);
+		}
+	}
+
+	&--office365{
+		background-color: $orange;
+		//min-height: 800px;
+
+		&:before{
+			background-image: url(../images/office365.png);
+		}
+	}
+
+
+	&--onenote{
+		background-color: $purple;
+		//min-height: 800px;
+
+		&:before{
+			background-image: url(../images/onenote.png);
+			background-size: auto;
+		}
+	}
+
+	&__soon{
+		padding: 325px 0;
+		margin: 0 0 0 39%;
+		color: #fff;
+		font-size: 22px;
+	}
+
+	&__content{
+		width: 61%;
+		margin: 0 0 0 39%;
+		padding: 60px 0 60px 45px;
+		background: #fff;
+	}
+
+	&__wrap{
+		min-width: 0;
+		max-width: 700px; 
+		margin: 0;
+	}
+
+	&__title{
+		font-size: 30px;
+		margin: 0 0 40px;
+		font-weight: 700;
+	}
+
+	&__text{
+		font-size: 22px;
+		margin: 0 0 1em;
+	}
+
+	&__list{
+		margin: 0 0 50px;
+		font-size: 22px;
+	}
+
+	&__button-placeholder{
+		
+	}
+
+	&__button{
+		padding: 12px 35px;
+	}
+}
+
+
+

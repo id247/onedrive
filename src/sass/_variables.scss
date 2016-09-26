@@ -7,13 +7,18 @@
 //     font-style: normal;
 // }
 
+$sans: 'PT Sans', sans-serif;
+$serif: 'PT Serif', sans-serif;
 
-$mainFontFamily: Helvetica, sans-serif;
+$mainFontFamily: $serif, Helvetica, sans-serif;
 
 //
 //colors
 //
 
+$blue: #0a4bb3;
+$orange: #eb3c00;
+$purple: #6a2b78;
 
 $text: #1c1c1c;
 
