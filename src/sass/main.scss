@@ -65,6 +65,7 @@
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-color: #c2c2c2;
 
 	color: #fff;
 
@@ -73,17 +74,14 @@
 	min-height: 715px;
 
 	&--onedrive{
-		background-color: #5f3428;
 		background-image: url(../images/bg/onedrive.jpg);
 	}
 
 	&--office365{
-		background-color: #8d7c6b;
 		background-image: url(../images/bg/office365.jpg);
 	}
 
 	&--onenote{
-		background-color: #a49c94;
 		background-image: url(../images/bg/onenote.jpg);
 	}
 
@@ -124,16 +122,22 @@
 	position: relative;
 	z-index: 5;
 
+	&__wrap{
+		padding: 0;
+	}
+
 	&__list{
 		text-align: left;	
 
 		display: flex;
 		flex-direction: row;	
+		font-size: 0;
 	}
 
 	&__item{
 		display: inline-block;
 		vertical-align: top;
+		font-size: 16px;
 	}
 
 	&__href{
@@ -197,11 +201,11 @@
 			
 			&:hover,
 			&.nav__href--active{
-				//color: #fff;
-				//background: $orange;
+				color: #fff;
+				background: $green;
 
 				&:before{
-					//@include sprite($nav-3-hover);
+					@include sprite($nav-3-hover);
 				}
 			}
 
@@ -291,25 +295,30 @@
 .about{
 	padding: 0;
 	position: relative;
+	padding: 0 0 0 50%;
 
 	&:before{
 		content: '';
 		position: absolute;
 		top: 20px;
 		bottom: 20px;
-		right: 62%;
-		width: 536px;
+		right: 50%;
+		left: 0px;
+		margin: 0 190px 0 0;
 		background-repeat: no-repeat;
 		background-position: 100% 50%;
-		background-size: contain;
+		//background-size: contain;
 	}
 
 	&--onedrive{
 		background-color: $blue;
-		//min-height: 800px;
 
 		&:before{
 			background-image: url(../images/onedrive.png);
+		}
+
+		.about__content{
+			min-height: 800px;
 		}
 	}
 
@@ -320,6 +329,10 @@
 		&:before{
 			background-image: url(../images/office365.png);
 		}
+
+		.about__content{
+			min-height: 600px;
+		}
 	}
 
 
@@ -329,20 +342,24 @@
 
 		&:before{
 			background-image: url(../images/onenote.png);
-			background-size: auto;
+		}
+
+		.about__content{
+			min-height: 600px;
 		}
 	}
 
 	&__soon{
 		padding: 325px 0;
-		margin: 0 0 0 39%;
+		//margin: 0 0 0 39%;
 		color: #fff;
 		font-size: 22px;
+		min-height: 600px;
 	}
 
 	&__content{
-		width: 61%;
-		margin: 0 0 0 39%;
+		//width: 61%;
+		margin: 0 0 0 -168px;
 		padding: 60px 0 60px 45px;
 		background: #fff;
 	}
