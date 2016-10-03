@@ -30,7 +30,7 @@
 	&__title{
 		text-align: center;
 		margin: 0 0 40px;
-		font-weight: 400;
+		font-weight: 700;
 		font-size: 36px;
 		line-height: 1.2;
 	}
@@ -106,7 +106,7 @@
 	}
 
 	&__button{
-		font-family: $sans;
+		font-family: $segoe;
 		padding: 20px 80px;
 	}
 }
@@ -144,7 +144,7 @@
 		display: block;
 		padding: 88px 20px 14px;
 		color: #c4c4c4;
-		font-family: $sans;
+		font-weight: 300;
 		font-size: 16px;
 		position: relative;
 
@@ -205,13 +205,18 @@
 				background: $green;
 
 				&:before{
-					@include sprite($nav-3-hover);
+					//color: #fff;
+					//@include sprite($nav-3-hover);
 				}
 			}
 
 			&:before{
-				margin: 46px 0 0 0px;
-				@include sprite($nav-3);
+				margin: 40px 0 0 0px;
+				//@include sprite($nav-3);
+				content: 'Education';
+				font-size: 32px;
+				line-height: 1;
+				font-weight: 400;
 			}
 		}
 

@@ -1,16 +1,34 @@
 @charset "UTF-8";
 
-// @font-face {
-//     font-family: 'font';
-//     src: url('../fonts/fonr.woff') format('woff');
-//     font-weight: normal;
-//     font-style: normal;
-// }
 
-$sans: 'PT Sans', sans-serif;
-$serif: 'PT Serif', sans-serif;
+@font-face {
+    font-family: 'SegoeUI';
+    src: url('../fonts/SegoeUISemilight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
 
-$mainFontFamily: $serif, Helvetica, sans-serif;
+@font-face {
+    font-family: 'SegoeUI';
+    src: url('../fonts/SegoeUIRegular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'SegoeUI';
+    src: url('../fonts/SegoeUISemiBold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+$segoe: 'SegoeUI', sans-serif;
+
+//$sans: 'PT Sans', sans-serif;
+//$serif: 'PT Serif', sans-serif;
+
+$mainFontFamily: $segoe, Helvetica, sans-serif;
 
 //
 //colors
