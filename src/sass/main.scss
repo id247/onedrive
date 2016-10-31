@@ -17,7 +17,11 @@
  * ========================================================================== */
 
 .section{
-	padding: 80px 0 80px;
+	padding: 100px 0 100px;
+
+	&--bg-light-blue{
+		background: #f7faff;
+	}
 
 	&__wrap{
 		@include clearfix;
@@ -36,7 +40,18 @@
 	}
 
 	&__text{
-		margin: 0 0 30px;		
+		margin: 0 auto 30px;	
+		text-align: center;
+		max-width: 880px;	
+	}
+
+	&__button-placeholder{
+		text-align: center;
+	}
+
+	&__video-placeholder{
+		text-align: center;
+		margin: 0 auto 55px;
 	}
 }
 
@@ -45,6 +60,7 @@
  * ========================================================================== */
 
 .logo{
+	text-align: left;
 	text-indent: -9999px;
 	display: inline-block;
 
@@ -71,10 +87,16 @@
 
 	padding: 18px 0 18px;
 
-	min-height: 715px;
+	//min-height: 600px;
+	min-height: 380px;
+	
+	&__wrap{
+		max-width: 1360px;
+	}
 
 	&--onedrive{
-		background-image: url(../images/bg/onedrive.jpg);
+		background-image: url(../images/bg/onedrive2.jpg);
+		min-height: 380px;
 	}
 
 	&--office365{
@@ -82,11 +104,12 @@
 	}
 
 	&--onenote{
-		background-image: url(../images/bg/onenote.jpg);
+		background-image: url(../images/bg/onedrive2.jpg);
 	}
 
 	&__logos{
-		margin: 0 0 140px;
+		margin: 0 0 60px;
+		text-align: right;
 	}
 
 	&__logo-placeholder{
@@ -97,8 +120,9 @@
 
 	&__title{
 		text-align: center;
-		font-size: 86px;
+		font-size: 54px;
 		margin: 0 0 50px;
+		font-weight: 400;
 	}
 
 	&__button-placeholder{
@@ -129,20 +153,25 @@
 	&__list{
 		text-align: left;	
 
+		text-align: center;
+
 		display: flex;
+		justify-content: center;
 		flex-direction: row;	
 		font-size: 0;
 	}
 
 	&__item{
 		display: inline-block;
+		text-align: left;
 		vertical-align: top;
 		font-size: 16px;
 	}
 
 	&__href{
 		display: block;
-		padding: 88px 20px 14px;
+		height: 76px;
+		padding: 45px 20px 14px;
 		color: #c4c4c4;
 		font-weight: 300;
 		font-size: 16px;
@@ -157,7 +186,7 @@
 
 		&--1{
 
-			width: 224px;
+			width: 236px;
 			
 			&:hover,
 			&.nav__href--active{
@@ -170,7 +199,7 @@
 			}
 
 			&:before{
-				margin: 40px 0 0 0px;
+				margin: 20px 0 0 0px;
 				@include sprite($nav-1);
 			}
 		}
@@ -190,8 +219,12 @@
 			}
 
 			&:before{
-				margin: 36px 0 0 0px;
+				margin: 12px 0 0 0px;
 				@include sprite($nav-2);
+			}
+
+			.nav__text{
+				margin: 0 0 0 59px;
 			}
 		}
 
@@ -211,10 +244,10 @@
 			}
 
 			&:before{
-				margin: 40px 0 0 0px;
+				margin: 15px 0 0 0px;
 				//@include sprite($nav-3);
 				content: 'Education';
-				font-size: 32px;
+				font-size: 33px;
 				line-height: 1;
 				font-weight: 400;
 			}
@@ -235,10 +268,16 @@
 			}
 
 			&:before{
-				margin: 30px 0 0 0px;
+				margin: 10px 0 0 0px;
 				@include sprite($nav-4);
 			}
 		}
+
+
+	}
+
+	&__text{
+		margin: 0 0 0 3px;
 	}
 }
 
@@ -401,4 +440,40 @@
 }
 
 
+/* ==========================================================================
+ * advantages
+ * ========================================================================== */
+
+.advantages{
+
+	&__list{
+		text-align: center;
+		margin: 0 -1% -30px;
+	}
+	
+	&__item{
+		display: inline-block;
+		vertical-align: top;
+		width: 30%;
+		margin: 0 1% 30px;
+		
+		&:before{
+			content: '';
+			display: block;
+			margin: 0 auto 20px;
+		}
+	
+		&--1:before{
+			@include sprite($advantages-1);
+		}
+	
+		&--2:before{
+			@include sprite($advantages-2);
+		}
+	
+		&--3:before{
+			@include sprite($advantages-3);
+		}
+	}
+}
 
